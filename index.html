@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – BigText</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #2563eb;
+      --brand-light: #eff6ff;
+      --text: #111827;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+      --surface: #f9fafb;
+      --radius: 12px;
+      --max-width: 820px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #1e40af 0%, #2563eb 60%, #3b82f6 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .app-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 72px;
+      height: 72px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 18px;
+      font-size: 36px;
+      margin-bottom: 20px;
+      backdrop-filter: blur(4px);
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    header p {
+      font-size: 1.05rem;
+      opacity: 0.85;
+    }
+    .badge-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Summary card ── */
+    .summary-card {
+      background: var(--brand-light);
+      border: 1px solid #bfdbfe;
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+    .summary-card h2 {
+      font-size: 1.1rem;
+      color: var(--brand);
+      font-weight: 700;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    @media (max-width: 600px) { .summary-grid { grid-template-columns: 1fr; } }
+    .summary-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.92rem;
+      color: #1e40af;
+    }
+    .summary-item span.icon { flex-shrink: 0; font-size: 1rem; }
+
+    /* ── Sections ── */
+    section { margin-bottom: 44px; }
+    section h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    section h2 .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--brand);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.8rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    section p, section li { color: #374151; font-size: 0.97rem; }
+    section ul, section ol { padding-left: 20px; }
+    section li { margin-bottom: 6px; }
+
+    /* ── Info cards ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 4px;
+    }
+    @media (max-width: 620px) { .card-grid { grid-template-columns: 1fr; } }
+    .info-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .info-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .info-card p, .info-card li {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    .info-card ul { padding-left: 16px; margin-top: 4px; }
+
+    /* ── No collect banner ── */
+    .no-collect {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius);
+      padding: 24px 28px;
+    }
+    .no-collect h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .no-collect ul { padding-left: 20px; }
+    .no-collect li { font-size: 0.93rem; color: #166534; margin-bottom: 5px; }
+
+    /* ── Third-party table ── */
+    .tp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+    .tp-table th {
+      background: var(--surface);
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 600;
+      color: var(--muted);
+      border-bottom: 2px solid var(--border);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .tp-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      color: #374151;
+      vertical-align: top;
+    }
+    .tp-table tr:last-child td { border-bottom: none; }
+    .tp-link { color: var(--brand); text-decoration: none; font-size: 0.85rem; }
+    .tp-link:hover { text-decoration: underline; }
+
+    /* ── Compliance pills ── */
+    .compliance-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #374151;
+    }
+    .pill .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-top: 8px;
+    }
+    .contact-card p { margin-bottom: 6px; font-size: 0.95rem; }
+    .contact-card a { color: var(--brand); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── Updated bar ── */
+    .meta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 48px;
+      font-size: 0.85rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 24px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">T</div>
+  <h1>BigText – Privacy Policy</h1>
+  <p>We respect your privacy. Here's exactly what we do — and don't — collect.</p>
+  <div class="badge-row">
+    <span class="badge">iOS App Store</span>
+    <span class="badge">Android Google Play</span>
+    <span class="badge">GDPR Compliant</span>
+    <span class="badge">CCPA Compliant</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- Quick Summary -->
+  <div class="summary-card">
+    <h2>&#9889; Quick Summary</h2>
+    <div class="summary-grid">
+      <div class="summary-item"><span class="icon">&#10060;</span> No user accounts or registration</div>
+      <div class="summary-item"><span class="icon">&#10060;</span> No personal information collected</div>
+      <div class="summary-item"><span class="icon">&#10060;</span> No location tracking</div>
+      <div class="summary-item"><span class="icon">&#10060;</span> No cloud storage or server uploads</div>
+      <div class="summary-item"><span class="icon">&#10060;</span> No analytics or crash reporting</div>
+      <div class="summary-item"><span class="icon">&#128274;</span> All preferences stored locally on your device</div>
+    </div>
+  </div>
+
+  <!-- 1. Introduction -->
+  <section>
+    <h2><span class="section-num">1</span> Introduction</h2>
+    <p>BigText ("we", "our", or "us") is developed by Sahil Partyal. This Privacy Policy explains how BigText handles information when you use our mobile application on iOS and Android. We are committed to protecting your privacy and being transparent about our practices.</p>
+    <p style="margin-top:12px;">By using BigText, you agree to the practices described in this policy. If you disagree with any part of this policy, please discontinue use of the application.</p>
+  </section>
+
+  <!-- 2. Information We Collect -->
+  <section>
+    <h2><span class="section-num">2</span> Information We Collect &amp; How We Use It</h2>
+    <div class="card-grid">
+
+      <div class="info-card">
+        <h3>&#128336; Google AdMob Ads</h3>
+        <p>Free users see banner advertisements powered by Google AdMob. AdMob may automatically collect:</p>
+        <ul>
+          <li>Device identifiers (IDFA / GAID)</li>
+          <li>IP address</li>
+          <li>App usage and interaction data</li>
+          <li>Device hardware &amp; OS information</li>
+        </ul>
+        <p style="margin-top:8px;">This data is used solely for ad personalisation and fraud prevention by Google. See Google's Privacy Policy for details.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>&#128717; In-App Purchases</h3>
+        <p>BigText offers optional subscription plans (monthly, yearly, lifetime) processed entirely through:</p>
+        <ul>
+          <li>Apple App Store (iOS)</li>
+          <li>Google Play (Android)</li>
+        </ul>
+        <p style="margin-top:8px;">We <strong>never</strong> receive, process, or store your payment details. All billing is handled exclusively by Apple or Google under their respective terms.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>&#128190; Local Storage</h3>
+        <p>Your display preferences are saved locally on your device using SharedPreferences:</p>
+        <ul>
+          <li>Font family &amp; size</li>
+          <li>Text &amp; background colours</li>
+          <li>Display mode settings</li>
+        </ul>
+        <p style="margin-top:8px;">This data <strong>never</strong> leaves your device. There is no cloud sync, no account, and no server-side storage.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>&#128444; Image Picker (Pro)</h3>
+        <p>Pro users may upload a custom logo image to personalise the app.</p>
+        <ul>
+          <li>Selected images are stored <strong>locally only</strong></li>
+          <li>Images are <strong>never uploaded</strong> to any server</li>
+          <li>Requires photo library access permission which you can revoke at any time in device Settings</li>
+        </ul>
+      </div>
+
+      <div class="info-card" style="grid-column: span 1;">
+        <h3>&#128161; Wakelock</h3>
+        <p>BigText uses a wakelock to keep your screen on while displaying text — for example during a presentation. This is a system-level feature only. <strong>No data is collected</strong> through this functionality.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. What We Don't Collect -->
+  <section>
+    <h2><span class="section-num">3</span> What We Don't Collect</h2>
+    <div class="no-collect">
+      <h3>&#9989; We never collect any of the following</h3>
+      <ul>
+        <li>Name, email address, phone number, or any personally identifiable information</li>
+        <li>Location data (GPS, coarse location, or IP-based location)</li>
+        <li>Camera or microphone data</li>
+        <li>Contacts, calendar, or other sensitive device data</li>
+        <li>Analytics, usage statistics, or crash reports</li>
+        <li>Browsing history or cross-app activity</li>
+        <li>Any data transmitted to our servers (we don't operate any)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Third-Party Services -->
+  <section>
+    <h2><span class="section-num">4</span> Third-Party Services</h2>
+    <p style="margin-bottom:16px;">BigText integrates with the following third-party services. Each operates under its own privacy policy.</p>
+    <table class="tp-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Purpose</th>
+          <th>Data Collected by Them</th>
+          <th>Privacy Policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google AdMob</strong></td>
+          <td>Banner advertising (free tier)</td>
+          <td>Device ID, IP, ad interactions</td>
+          <td><a class="tp-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Apple StoreKit</strong></td>
+          <td>In-app purchases (iOS)</td>
+          <td>Payment handled by Apple</td>
+          <td><a class="tp-link" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a></td>
+        </tr>
+        <tr>
+          <td><strong>Google Play Billing</strong></td>
+          <td>In-app purchases (Android)</td>
+          <td>Payment handled by Google</td>
+          <td><a class="tp-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 5. Data Sharing -->
+  <section>
+    <h2><span class="section-num">5</span> Data Sharing &amp; Disclosure</h2>
+    <p>We do not sell, rent, trade, or share your personal data with any third parties, because we do not collect personal data in the first place. Any data collected by third-party SDKs (e.g. AdMob) is governed solely by those third parties' own policies.</p>
+    <p style="margin-top:12px;">We may disclose information if required by law or valid legal process, though given the minimal data we hold, such disclosure would be extremely limited in scope.</p>
+  </section>
+
+  <!-- 6. Data Retention -->
+  <section>
+    <h2><span class="section-num">6</span> Data Retention &amp; Deletion</h2>
+    <p>All data stored by BigText (preferences, logo image) resides entirely on your device. You can delete this data at any time by:</p>
+    <ul style="margin-top:12px;">
+      <li><strong>Clearing app data</strong> — via your device's Settings &gt; Apps &gt; BigText &gt; Clear Data</li>
+      <li><strong>Uninstalling the app</strong> — removes all locally stored data</li>
+      <li><strong>Resetting preferences</strong> — using the reset option within the app (if available)</li>
+    </ul>
+    <p style="margin-top:12px;">For data collected by third-party services (AdMob), please refer to Google's data deletion options in their privacy policy.</p>
+  </section>
+
+  <!-- 7. Children's Privacy -->
+  <section>
+    <h2><span class="section-num">7</span> Children's Privacy</h2>
+    <p>BigText is not directed to children under the age of 13 (or 16 in the EU). We do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us immediately and we will take steps to delete such information.</p>
+  </section>
+
+  <!-- 8. Compliance -->
+  <section>
+    <h2><span class="section-num">8</span> Regulatory Compliance</h2>
+    <div class="compliance-row" style="margin-bottom:20px;">
+      <div class="pill"><span class="dot"></span> GDPR (EU/EEA)</div>
+      <div class="pill"><span class="dot"></span> CCPA (California)</div>
+      <div class="pill"><span class="dot"></span> Google Play Policies</div>
+      <div class="pill"><span class="dot"></span> Apple App Store Guidelines</div>
+    </div>
+
+    <p><strong>GDPR (EU Users):</strong> Because we do not collect personal data directly, most GDPR obligations do not apply to us. For data processed by AdMob, Google acts as an independent data controller. You may opt out of personalised advertising through your device's advertising settings.</p>
+
+    <p style="margin-top:12px;"><strong>CCPA (California Users):</strong> We do not sell personal information. California residents have the right to know what personal information is collected — in our case, it is none on our end. For AdMob data, please refer to Google's CCPA disclosures.</p>
+
+    <p style="margin-top:12px;"><strong>Opt-out of personalised ads:</strong></p>
+    <ul style="margin-top:6px;">
+      <li><strong>iOS:</strong> Settings &gt; Privacy &amp; Security &gt; Tracking &gt; disable "Allow Apps to Request to Track"</li>
+      <li><strong>Android:</strong> Settings &gt; Google &gt; Ads &gt; "Delete advertising ID" or "Opt out of Ads Personalisation"</li>
+    </ul>
+  </section>
+
+  <!-- 9. Security -->
+  <section>
+    <h2><span class="section-num">9</span> Security</h2>
+    <p>Since BigText stores all user data locally on your device and does not transmit it to external servers, your data security is primarily governed by your device's own security features (device encryption, screen lock, etc.). We encourage you to keep your device and operating system up to date.</p>
+  </section>
+
+  <!-- 10. Changes -->
+  <section>
+    <h2><span class="section-num">10</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the bottom of this page. For significant changes, we may notify you via an in-app notice. Continued use of BigText after any changes constitutes acceptance of the updated policy.</p>
+    <p style="margin-top:12px;">We encourage you to review this policy periodically to stay informed about how we handle information.</p>
+  </section>
+
+  <!-- 11. Contact -->
+  <section>
+    <h2><span class="section-num">11</span> Contact Us</h2>
+    <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
+    <div class="contact-card">
+      <p><strong>Developer:</strong> Sahil Partyal</p>
+      <p><strong>App:</strong> BigText</p>
+      <p><strong>Email:</strong> <a href="mailto:sahil.partyal@unitaspro.com">sahil.partyal@unitaspro.com</a></p>
+      <p><strong>Address:</strong> Gurdaspur, Punjab 143531, India</p>
+    </div>
+  </section>
+
+  <div class="meta-bar">
+    <span>&#128197; <strong>Last Updated:</strong> May 20, 2026</span>
+    <span>Applies to BigText on iOS &amp; Android</span>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Sahil Partyal &mdash; BigText. All rights reserved.
+</footer>
+
+</body>
+</html>
