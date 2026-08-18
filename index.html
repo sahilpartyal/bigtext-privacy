@@ -450,6 +450,8 @@
       font-size: 0.82rem;
       color: var(--muted);
     }
+    footer a { color: var(--brand); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
     /* ── Fade-in animation ── */
     @keyframes fadeUp {
@@ -487,16 +489,17 @@
     <a class="sidebar-link" href="#no-collect"><span class="link-num">03</span>What We Don't Collect</a>
     <a class="sidebar-link" href="#third-party"><span class="link-num">04</span>Third Parties</a>
     <a class="sidebar-link" href="#sharing"><span class="link-num">05</span>Data Sharing</a>
-    <a class="sidebar-link" href="#retention"><span class="link-num">06</span>Retention</a>
-    <a class="sidebar-link" href="#security"><span class="link-num">07</span>Security</a>
-    <a class="sidebar-link" href="#changes"><span class="link-num">08</span>Changes</a>
-    <a class="sidebar-link" href="#contact"><span class="link-num">09</span>Contact</a>
+    <a class="sidebar-link" href="#retention"><span class="link-num">06</span>Retention &amp; Deletion</a>
+    <a class="sidebar-link" href="#choices"><span class="link-num">07</span>Your Ad Choices</a>
+    <a class="sidebar-link" href="#children"><span class="link-num">08</span>Children</a>
+    <a class="sidebar-link" href="#security"><span class="link-num">09</span>Security</a>
+    <a class="sidebar-link" href="#changes"><span class="link-num">10</span>Changes</a>
+    <a class="sidebar-link" href="#contact"><span class="link-num">11</span>Contact</a>
   </div>
 </nav>
 
 <main>
 
-  <!-- 1. Introduction -->
   <section id="intro">
     <div class="section-header">
       <span class="section-num">01</span>
@@ -506,12 +509,12 @@
     <p>By using Bigtext Board, you agree to the practices described in this policy. If you disagree with any part of this policy, please discontinue use of the application.</p>
   </section>
 
-  <!-- 2. Information We Collect -->
   <section id="collect">
     <div class="section-header">
       <span class="section-num">02</span>
       <span class="section-title">Information We Collect &amp; How We Use It</span>
     </div>
+    <p>Bigtext Board itself has no servers and no accounts. The information described below is collected by the advertising and platform services built into the app, and we are disclosing it here because those services run inside our app.</p>
     <div class="card-grid">
 
       <div class="info-card">
@@ -528,6 +531,26 @@
       </div>
 
       <div class="info-card">
+        <span class="info-card-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+        <h3>Approximate Location</h3>
+        <p>We never request GPS access, and the app never asks for a location permission.</p>
+        <p>Google AdMob does use your IP address to estimate your general area — usually your city or region — so that ads match your country and language.</p>
+        <p style="margin-top:8px;">This is an <strong>approximate</strong> location only. Your precise or GPS location is never collected, stored, or shared.</p>
+      </div>
+
+      <div class="info-card">
+        <span class="info-card-icon"><svg viewBox="0 0 24 24"><rect x="8" y="6" width="8" height="14" rx="4"/><path d="M8 10H4M8 15H3M16 10h5M16 15h5M9 6l-2-3M15 6l2-3"/></svg></span>
+        <h3>Crash Logs &amp; Diagnostics</h3>
+        <p>If the app crashes or misbehaves, the app store sends us an automatic technical report containing:</p>
+        <ul>
+          <li>Device model and OS version</li>
+          <li>App version</li>
+          <li>Technical details of the failure</li>
+        </ul>
+        <p style="margin-top:8px;">These reports <strong>never</strong> contain the text you type, your saved messages, or any image you select. We use them only to fix bugs.</p>
+      </div>
+
+      <div class="info-card">
         <span class="info-card-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></span>
         <h3>In-App Purchases</h3>
         <p>Bigtext Board offers optional subscription plans processed entirely through:</p>
@@ -541,8 +564,9 @@
       <div class="info-card">
         <span class="info-card-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></span>
         <h3>Local Storage</h3>
-        <p>Your display preferences are saved locally on your device:</p>
+        <p>Your messages and display preferences are saved locally on your device:</p>
         <ul>
+          <li>Text you have displayed recently</li>
           <li>Font family &amp; size</li>
           <li>Text &amp; background colours</li>
           <li>Display mode settings</li>
@@ -553,35 +577,33 @@
       <div class="info-card">
         <span class="info-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg></span>
         <h3>Image Picker (Pro)</h3>
-        <p>Pro users may upload a custom logo image to personalise the app.</p>
+        <p>Pro users may add a custom logo image to the display.</p>
         <ul>
           <li>Images are stored <strong>locally only</strong></li>
           <li>Images are <strong>never uploaded</strong> to any server</li>
-          <li>Photo library permission can be revoked anytime in device Settings</li>
+          <li>Photo permission can be revoked anytime in device Settings</li>
         </ul>
       </div>
 
       <div class="info-card card-full">
         <span class="info-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><path d="M9 10l2 2 4-4"/></svg></span>
         <h3>Wakelock</h3>
-        <p>Bigtext Board uses a wakelock to keep your screen on while displaying text — for example during a presentation. This is a system-level feature only. <strong>No data is collected</strong> through this functionality.</p>
+        <p>Bigtext Board keeps your screen on while a message is displayed — for example during a pickup or a presentation. This is a system-level feature only. <strong>No data is collected</strong> through it.</p>
       </div>
 
     </div>
   </section>
 
-  <!-- 3. Data We Don't Collect -->
   <section id="no-collect">
     <div class="section-header">
       <span class="section-num">03</span>
       <span class="section-title">Data We Don't Collect</span>
     </div>
     <div class="notice-box">
-      <p>We do not collect any of your personal data. Bigtext Board is built to run entirely without user accounts or server-side logging. To keep the app free, we rely on Google AdMob for advertising, and standard platform tools for processing purchases. These third-party networks automatically handle limited technical identifiers entirely under their own independent privacy policies, as detailed in Section 04.</p>
+      <p>We hold no personal data about you. Bigtext Board has no user accounts, no sign-up, and no server-side logging — we never see the text you type, the messages you save, or the images you add. To keep the app free, we rely on Google AdMob for advertising and on the app stores for purchases. Those services handle the technical identifiers described in Section 02, under their own independent privacy policies.</p>
     </div>
   </section>
 
-  <!-- 4. Third-Party Services -->
   <section id="third-party">
     <div class="section-header">
       <span class="section-num">04</span>
@@ -593,7 +615,7 @@
       <div class="tp-card">
         <span class="tp-card-name">Google AdMob</span>
         <div class="tp-card-meta"><strong>Purpose</strong>Banner advertising (free tier)</div>
-        <div class="tp-card-meta"><strong>Data Collected</strong>Device ID, IP, ad interactions</div>
+        <div class="tp-card-meta"><strong>Data Collected</strong>Device ID, IP, approximate location, ad interactions</div>
         <a class="tp-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy ↗</a>
       </div>
 
@@ -614,61 +636,96 @@
     </div>
   </section>
 
-  <!-- 5. Data Sharing -->
   <section id="sharing">
     <div class="section-header">
       <span class="section-num">05</span>
       <span class="section-title">Data Sharing &amp; Disclosure</span>
     </div>
-    <p>We do not sell, rent, trade, or share your personal data with any third parties. Any data collected by third-party SDKs (e.g. AdMob) is governed solely by those third parties' own policies.</p>
-    <p>We may disclose information if required by law or valid legal process, though given the minimal data we hold, such disclosure would be extremely limited in scope.</p>
+    <p>The following information is shared with Google and its advertising partners so that ads can be served and measured in the free version of the app:</p>
+    <ul>
+      <li>Your advertising identifier (GAID on Android, IDFA on iOS)</li>
+      <li>Your approximate location, derived from your IP address</li>
+      <li>Basic app interaction data, such as when an ad was shown or tapped</li>
+      <li>Device and operating system information</li>
+    </ul>
+    <p style="margin-top:12px;">We do not sell or rent your personal information. We never share the text you type, your saved messages, your chosen fonts and colours, or any image you add to the display — that information never leaves your device.</p>
+    <p>Google's handling of this data is governed by its own <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:none;font-weight:500;">Privacy Policy</a>, and you can read how Google uses data from apps that use its services <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:none;font-weight:500;">here</a>.</p>
+    <p>We may also disclose information if required by law or valid legal process — though given how little we hold, such disclosure would be extremely limited in scope.</p>
   </section>
 
-  <!-- 6. Data Retention -->
   <section id="retention">
     <div class="section-header">
       <span class="section-num">06</span>
       <span class="section-title">Data Retention &amp; Deletion</span>
     </div>
-    <p>All data stored by Bigtext Board (preferences, logo image) resides entirely on your device. You can delete this data at any time by:</p>
+    <p>Bigtext Board has no user accounts and no servers, so we hold no copy of your data and there is nothing for us to delete on your behalf. Everything the app stores lives on your device, and you can remove it at any time:</p>
     <div class="del-list">
       <div class="del-item">
         <div class="del-item-dot"></div>
-        <div class="del-item-text"><strong>Clearing app data</strong> — via Settings &gt; Apps &gt; Bigtext Board &gt; Clear Data</div>
+        <div class="del-item-text"><strong>Uninstall the app</strong> — removes your messages, preferences, and any saved logo image</div>
       </div>
       <div class="del-item">
         <div class="del-item-dot"></div>
-        <div class="del-item-text"><strong>Uninstalling the app</strong> — removes all locally stored data</div>
+        <div class="del-item-text"><strong>Clear app data (Android)</strong> — Settings &gt; Apps &gt; Bigtext Board &gt; Storage &gt; Clear data</div>
       </div>
       <div class="del-item">
         <div class="del-item-dot"></div>
-        <div class="del-item-text"><strong>Resetting preferences</strong> — using the reset option within the app (if available)</div>
+        <div class="del-item-text"><strong>Reset your advertising identifier</strong> — Android: Settings &gt; Google &gt; Ads. iOS: Settings &gt; Privacy &amp; Security &gt; Tracking</div>
       </div>
     </div>
+    <p style="margin-top:14px;">If you have a question about your data, write to <a href="mailto:sahil.partyal@unitaspro.com" style="color:var(--brand);text-decoration:none;font-weight:500;">sahil.partyal@unitaspro.com</a> and we will respond within 30 days.</p>
   </section>
 
-  <!-- 7. Security -->
-  <section id="security">
+  <section id="choices">
     <div class="section-header">
       <span class="section-num">07</span>
-      <span class="section-title">Security</span>
+      <span class="section-title">Your Choices About Ads</span>
     </div>
-    <p>Since Bigtext Board stores all user data locally on your device and does not transmit it to external servers, your data security is primarily governed by your device's own security features (device encryption, screen lock, etc.). We encourage you to keep your device and operating system up to date.</p>
+    <div class="del-list" style="margin-top:0;">
+      <div class="del-item">
+        <div class="del-item-dot"></div>
+        <div class="del-item-text"><strong>Remove ads entirely</strong> — upgrade to Bigtext Pro. Pro users see no advertising, and no advertising identifier is sent.</div>
+      </div>
+      <div class="del-item">
+        <div class="del-item-dot"></div>
+        <div class="del-item-text"><strong>Limit ad personalisation (Android)</strong> — Settings &gt; Google &gt; Ads &gt; Delete advertising ID</div>
+      </div>
+      <div class="del-item">
+        <div class="del-item-dot"></div>
+        <div class="del-item-text"><strong>Limit ad tracking (iOS)</strong> — Settings &gt; Privacy &amp; Security &gt; Tracking &gt; turn off "Allow Apps to Request to Track"</div>
+      </div>
+    </div>
   </section>
 
-  <!-- 8. Changes -->
-  <section id="changes">
+  <section id="children">
     <div class="section-header">
       <span class="section-num">08</span>
-      <span class="section-title">Changes to This Policy</span>
+      <span class="section-title">Children's Privacy</span>
     </div>
-    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the bottom of this page. For significant changes, we may notify you via an in-app notice. Continued use of Bigtext Board after any changes constitutes acceptance of the updated policy.</p>
+    <p>Bigtext Board is intended for users aged 18 and over and is not directed at children. We do not knowingly collect information from children.</p>
+    <p>If you believe a child has used the app and you have a concern, contact us at <a href="mailto:sahil.partyal@unitaspro.com" style="color:var(--brand);text-decoration:none;font-weight:500;">sahil.partyal@unitaspro.com</a>.</p>
   </section>
 
-  <!-- 9. Contact -->
-  <section id="contact">
+  <section id="security">
     <div class="section-header">
       <span class="section-num">09</span>
+      <span class="section-title">Security</span>
+    </div>
+    <p>Because Bigtext Board stores all of your content locally and does not transmit it to any server of ours, your data security is primarily governed by your device's own protections — device encryption, screen lock, and so on. Data that the advertising and store services do transmit is sent over encrypted (HTTPS) connections.</p>
+    <p>We encourage you to keep your device and operating system up to date.</p>
+  </section>
+
+  <section id="changes">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <span class="section-title">Changes to This Policy</span>
+    </div>
+    <p>We may update this Privacy Policy from time to time. When we do, we will revise the "Last Updated" date at the bottom of this page. For significant changes, we may notify you via an in-app notice or the app's release notes. Continued use of Bigtext Board after any changes constitutes acceptance of the updated policy.</p>
+  </section>
+
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">11</span>
       <span class="section-title">Contact Us</span>
     </div>
     <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us:</p>
@@ -693,7 +750,7 @@
   </section>
 
   <div class="meta-bar">
-    <span style="display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><strong>Last Updated:</strong> May 20, 2026</span>
+    <span style="display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><strong>Last Updated:</strong> August 19, 2026</span>
     <span>Applies to Bigtext Board on iOS &amp; Android</span>
   </div>
 
@@ -702,7 +759,8 @@
 </div><!-- /.page-body -->
 
 <footer>
-  &copy; 2026 Sahil Partyal &mdash; Bigtext Board. All rights reserved.
+  &copy; 2026 Sahil Partyal &mdash; Bigtext Board. All rights reserved.<br>
+  <a href="terms/">Terms of Use</a>
 </footer>
 
 <script>
