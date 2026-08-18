@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use – Bigtext Board</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --brand: #2563eb;
+      --brand-mid: #1d4ed8;
+      --brand-dark: #1e3a8a;
+      --brand-light: #eff6ff;
+      --brand-tint: #f0f7ff;
+      --text: #0f172a;
+      --text-secondary: #475569;
+      --muted: #94a3b8;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+      --bg: #ffffff;
+      --surface: #f8fafc;
+      --surface-hover: #f1f5f9;
+      --radius-sm: 8px;
+      --radius: 14px;
+      --radius-lg: 20px;
+      --max-width: 760px;
+      --shadow-sm: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+      --shadow: 0 4px 16px rgba(15,23,42,0.08), 0 1px 4px rgba(15,23,42,0.04);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 15.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(150deg, #0f2a6e 0%, #1e40af 45%, #2563eb 75%, #3b82f6 100%);
+      color: #fff;
+      padding: 64px 24px 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 20% 50%, rgba(255,255,255,0.04) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 60% at 80% 20%, rgba(99,179,237,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .header-inner { position: relative; z-index: 1; }
+
+    .logo-wrapper {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 10px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.1);
+      width: 76px;
+      height: 76px;
+      overflow: hidden;
+    }
+    .logo-wrapper img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      object-position: top center;
+      display: block;
+    }
+
+    header h1 {
+      font-size: clamp(1.6rem, 4vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    header p {
+      font-size: 0.975rem;
+      opacity: 0.75;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+    }
+    @media (max-width: 500px) {
+      header p { white-space: normal; }
+    }
+
+    /* ── Page layout ── */
+    .page-body {
+      display: flex;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+      gap: 48px;
+      align-items: flex-start;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 200px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 32px;
+      padding: 32px 0 96px;
+    }
+    .sidebar-label {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      padding-left: 12px;
+    }
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 12px;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
+      position: relative;
+      line-height: 1.3;
+    }
+    .sidebar-link:hover {
+      background: var(--surface);
+      color: var(--text);
+    }
+    .sidebar-link.active {
+      background: var(--brand-light);
+      color: var(--brand);
+      font-weight: 600;
+    }
+    .sidebar-link .link-num {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      min-width: 18px;
+      flex-shrink: 0;
+    }
+    .sidebar-link.active .link-num {
+      color: var(--brand);
+    }
+
+    @media (max-width: 860px) {
+      .sidebar { display: none; }
+      .page-body { padding: 0 16px; gap: 0; }
+    }
+
+    /* ── Layout ── */
+    main {
+      flex: 1;
+      min-width: 0;
+      padding: 56px 0 96px;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 20px;
+    }
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-num {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--brand);
+      letter-spacing: 0.08em;
+      background: var(--brand-light);
+      border-radius: 6px;
+      padding: 3px 7px;
+      flex-shrink: 0;
+      line-height: 1.4;
+    }
+    .section-title {
+      font-size: 1.05rem;
+      font-weight: 650;
+      color: var(--text);
+      letter-spacing: -0.2px;
+    }
+
+    section p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+      line-height: 1.75;
+    }
+    section p:last-child { margin-bottom: 0; }
+    section ul, section ol {
+      padding-left: 18px;
+      margin-top: 10px;
+    }
+    section li {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 6px;
+      line-height: 1.65;
+    }
+
+    /* ── Info cards ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    @media (max-width: 580px) { .card-grid { grid-template-columns: 1fr; } }
+
+    .info-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 22px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .info-card:hover {
+      box-shadow: var(--shadow);
+      border-color: var(--border-strong);
+      transform: translateY(-1px);
+    }
+    .info-card-icon {
+      width: 28px;
+      height: 28px;
+      margin-bottom: 12px;
+      display: block;
+      color: var(--brand);
+    }
+    .info-card-icon svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--brand);
+      fill: none;
+      stroke-width: 1.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .info-card h3 {
+      font-size: 0.88rem;
+      font-weight: 650;
+      color: var(--text);
+      margin-bottom: 10px;
+      letter-spacing: -0.1px;
+    }
+    .info-card p, .info-card li {
+      font-size: 0.845rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+    .info-card ul {
+      padding-left: 14px;
+      margin-top: 6px;
+      margin-bottom: 0;
+    }
+    .info-card li { margin-bottom: 4px; }
+    .info-card p + p { margin-top: 6px; }
+    .info-card strong { color: var(--text); font-weight: 600; }
+
+    .card-full { grid-column: span 2; }
+    @media (max-width: 580px) { .card-full { grid-column: span 1; } }
+
+    /* ── Notice box ── */
+    .notice-box {
+      background: var(--brand-tint);
+      border: 1px solid #bfdbfe;
+      border-left: 3px solid var(--brand);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+    }
+    .notice-box p {
+      font-size: 0.93rem;
+      color: #1e40af;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* ── Third-party: card layout (responsive) ── */
+    .tp-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .tp-card {
+      display: grid;
+      grid-template-columns: 130px 1fr 1fr auto;
+      align-items: center;
+      gap: 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 620px) {
+      .tp-card {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+      }
+      .tp-card-name { grid-column: 1 / -1; }
+    }
+    @media (max-width: 400px) {
+      .tp-card { grid-template-columns: 1fr; }
+      .tp-card-name { grid-column: auto; }
+    }
+    .tp-card-name {
+      font-size: 0.88rem;
+      font-weight: 650;
+      color: var(--text);
+    }
+    .tp-card-meta {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .tp-card-meta strong {
+      display: block;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 2px;
+    }
+    .tp-link {
+      font-size: 0.8rem;
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .tp-link:hover { text-decoration: underline; }
+
+    /* ── Deletion list ── */
+    .del-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .del-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px 18px;
+    }
+    .del-item-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--brand);
+      flex-shrink: 0;
+      margin-top: 7px;
+    }
+    .del-item-text {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .del-item-text strong { color: var(--text); font-weight: 600; }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, var(--surface) 0%, #eef4ff 100%);
+      border: 1px solid #dbeafe;
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-top: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 32px;
+    }
+    @media (max-width: 500px) {
+      .contact-card { grid-template-columns: 1fr; padding: 22px 20px; }
+    }
+    .contact-row { display: flex; flex-direction: column; gap: 2px; }
+    .contact-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+    .contact-value {
+      font-size: 0.92rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .contact-value a {
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-value a:hover { text-decoration: underline; }
+
+    /* ── Meta bar ── */
+    .meta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 56px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 24px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    footer a { color: var(--brand); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── Fade-in animation ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .header-inner { animation: fadeUp 0.5s ease both; }
+    section { animation: fadeUp 0.4s ease both; }
+    section:nth-child(1) { animation-delay: 0.05s; }
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.15s; }
+    section:nth-child(4) { animation-delay: 0.2s; }
+    section:nth-child(5) { animation-delay: 0.25s; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-wrapper">
+      <img src="../Bigtext-Board-logo.png" alt="Bigtext Board Logo" />
+    </div>
+    <h1>Bigtext Board – Terms of Use</h1>
+    <p>The plain-English rules for using the app and its Pro plans.</p>
+  </div>
+</header>
+
+<div class="page-body">
+
+<nav class="sidebar" aria-label="Table of contents">
+  <div class="sidebar-label">Contents</div>
+  <div class="sidebar-nav">
+    <a class="sidebar-link active" href="#agreement"><span class="link-num">01</span>Agreement</a>
+    <a class="sidebar-link" href="#what"><span class="link-num">02</span>What the App Does</a>
+    <a class="sidebar-link" href="#licence"><span class="link-num">03</span>Licence</a>
+    <a class="sidebar-link" href="#free"><span class="link-num">04</span>Free Version &amp; Ads</a>
+    <a class="sidebar-link" href="#pro"><span class="link-num">05</span>Bigtext Pro Plans</a>
+    <a class="sidebar-link" href="#renewal"><span class="link-num">06</span>Renewal &amp; Cancelling</a>
+    <a class="sidebar-link" href="#payments"><span class="link-num">07</span>Payments &amp; Refunds</a>
+    <a class="sidebar-link" href="#restore"><span class="link-num">08</span>Restoring Purchases</a>
+    <a class="sidebar-link" href="#use"><span class="link-num">09</span>Acceptable Use</a>
+    <a class="sidebar-link" href="#content"><span class="link-num">10</span>Your Content</a>
+    <a class="sidebar-link" href="#liability"><span class="link-num">11</span>Disclaimer</a>
+    <a class="sidebar-link" href="#changes"><span class="link-num">12</span>Changes &amp; Law</a>
+    <a class="sidebar-link" href="#contact"><span class="link-num">13</span>Contact</a>
+  </div>
+</nav>
+
+<main>
+
+  <!-- 1 -->
+  <section id="agreement">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <span class="section-title">Agreement</span>
+    </div>
+    <p>These Terms of Use are an agreement between you and Sahil Partyal ("we", "our", "us"), the developer of Bigtext Board ("the app"). By downloading or using the app on Android or iOS, you accept these terms. If you do not accept them, please do not use the app.</p>
+    <p>These terms work alongside our <a href="../" style="color:var(--brand);text-decoration:none;font-weight:500;">Privacy Policy</a>, which explains how information is handled.</p>
+  </section>
+
+  <!-- 2 -->
+  <section id="what">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <span class="section-title">What the App Does</span>
+    </div>
+    <p>Bigtext Board displays the text you type across the full screen of your device, so it can be read from a distance — at an airport pickup, on a shop counter, at an event, or during a presentation.</p>
+    <p>The app works completely offline. There is no account, no sign-up, and nothing you type is sent anywhere.</p>
+  </section>
+
+  <!-- 3 -->
+  <section id="licence">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <span class="section-title">Licence</span>
+    </div>
+    <p>We grant you a personal, non-exclusive, non-transferable licence to use Bigtext Board on devices you own or control. You may not copy, sell, rent, sub-licence, reverse-engineer, or redistribute the app or any part of it.</p>
+  </section>
+
+  <!-- 4 -->
+  <section id="free">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <span class="section-title">Free Version &amp; Advertising</span>
+    </div>
+    <p>The free version is supported by advertising served through Google AdMob, and includes a limited feature set:</p>
+    <ul>
+      <li>4 fonts and 6 colours</li>
+      <li>10 saved recent messages</li>
+      <li>All three display modes</li>
+      <li>No custom logo</li>
+    </ul>
+    <p style="margin-top:12px;">Upgrading to Bigtext Pro removes all advertising. How advertising data is handled is described in our <a href="../" style="color:var(--brand);text-decoration:none;font-weight:500;">Privacy Policy</a>.</p>
+  </section>
+
+  <!-- 5 -->
+  <section id="pro">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <span class="section-title">Bigtext Pro Plans</span>
+    </div>
+    <p>Bigtext Pro unlocks all 12 fonts, all 15 colours, your own logo on the display, 50 saved messages, and removes every ad. It is available in three forms:</p>
+    <div class="card-grid" style="margin-top:14px;">
+
+      <div class="info-card">
+        <span class="info-card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+        <h3>Monthly</h3>
+        <p>Billed every month. <strong>Renews automatically</strong> until you cancel.</p>
+      </div>
+
+      <div class="info-card">
+        <span class="info-card-icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-6.2-8.6"/><polyline points="21 3 21 9 15 9"/></svg></span>
+        <h3>Yearly</h3>
+        <p>Billed once a year at a lower effective rate. <strong>Renews automatically</strong> until you cancel.</p>
+      </div>
+
+      <div class="info-card card-full">
+        <span class="info-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.3 5.9 20.6l1.4-6.8L2.2 9.1l6.9-.8z"/></svg></span>
+        <h3>Lifetime</h3>
+        <p>A single one-time payment. <strong>Does not renew</strong> and is never charged again.</p>
+      </div>
+
+    </div>
+    <div class="notice-box" style="margin-top:16px;">
+      <p>The exact price and billing period are always shown on the purchase screen inside the app, in your own currency, before you confirm anything. We never display a price that has not come from the store itself.</p>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section id="renewal">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <span class="section-title">Automatic Renewal &amp; Cancelling</span>
+    </div>
+    <p>Monthly and yearly subscriptions renew automatically at the end of each billing period, and your payment method is charged at the same price, unless you cancel at least 24 hours before the period ends.</p>
+    <p>You can cancel at any time and keep Pro features until the end of the period you have already paid for.</p>
+    <div class="del-list">
+      <div class="del-item">
+        <div class="del-item-dot"></div>
+        <div class="del-item-text"><strong>Android</strong> — Google Play Store app &gt; your profile icon &gt; Payments &amp; subscriptions &gt; Subscriptions &gt; Bigtext Board &gt; Cancel subscription</div>
+      </div>
+      <div class="del-item">
+        <div class="del-item-dot"></div>
+        <div class="del-item-text"><strong>iOS</strong> — Settings &gt; your name &gt; Subscriptions &gt; Bigtext Board &gt; Cancel subscription</div>
+      </div>
+      <div class="del-item">
+        <div class="del-item-dot"></div>
+        <div class="del-item-text"><strong>Deleting the app does not cancel a subscription.</strong> You must cancel through the store as described above.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7 -->
+  <section id="payments">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <span class="section-title">Payments, Refunds &amp; Price Changes</span>
+    </div>
+    <p>All payments are processed by Google Play or the Apple App Store. We never receive or store your card details.</p>
+    <p>Refunds are handled by the store under its own policy — see <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:none;font-weight:500;">Google Play refunds</a> or <a href="https://support.apple.com/billing" target="_blank" rel="noopener" style="color:var(--brand);text-decoration:none;font-weight:500;">Apple billing support</a>. If you believe you were charged in error, write to us and we will help you raise it.</p>
+    <p>If we ever change the price of a subscription, the store will notify you before the change takes effect, and you may cancel if you do not accept the new price.</p>
+  </section>
+
+  <!-- 8 -->
+  <section id="restore">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <span class="section-title">Restoring Purchases</span>
+    </div>
+    <p>If you reinstall the app or move to a new device, use the <strong>Restore purchases</strong> option on the Bigtext Pro screen. Your purchase is tied to the store account you bought it with, so sign in with the same account.</p>
+  </section>
+
+  <!-- 9 -->
+  <section id="use">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <span class="section-title">Acceptable Use</span>
+    </div>
+    <p>You are responsible for whatever you display using the app. Do not use Bigtext Board to show content that is unlawful, threatening, harassing, hateful, or that infringes someone else's rights.</p>
+    <p>Because everything stays on your device, we never see, store, or moderate what you type — which is exactly why this responsibility is entirely yours.</p>
+  </section>
+
+  <!-- 10 -->
+  <section id="content">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <span class="section-title">Your Content</span>
+    </div>
+    <p>Any text you type and any logo or image you add remains yours. It is stored only on your device. We claim no rights over it, and it is never uploaded anywhere.</p>
+  </section>
+
+  <!-- 11 -->
+  <section id="liability">
+    <div class="section-header">
+      <span class="section-num">11</span>
+      <span class="section-title">Disclaimer &amp; Limitation of Liability</span>
+    </div>
+    <p>The app is provided "as is", without warranties of any kind, and you use it at your own risk. We aim to keep it working reliably but cannot guarantee it will be uninterrupted or error-free.</p>
+    <p>In particular, we are not responsible for a missed meeting, a missed pickup, or any other loss arising from a device failure, a flat battery, a screen that is not visible enough in bright light, or any other circumstance outside our control.</p>
+    <p>To the maximum extent permitted by law, our total liability for any claim relating to the app is limited to the amount you paid for it in the twelve months before the claim arose.</p>
+  </section>
+
+  <!-- 12 -->
+  <section id="changes">
+    <div class="section-header">
+      <span class="section-num">12</span>
+      <span class="section-title">Changes to These Terms &amp; Governing Law</span>
+    </div>
+    <p>We may update these terms as the app changes. The date at the bottom of this page shows when they were last revised, and continuing to use the app after a change means you accept the updated terms.</p>
+    <p>You may stop using the app at any time by uninstalling it. We may suspend access if these terms are seriously breached.</p>
+    <p>These terms are governed by the laws of India, and the courts of India will have jurisdiction over any dispute — without affecting any consumer rights you have under the laws of the country where you live.</p>
+  </section>
+
+  <!-- 13 -->
+  <section id="contact">
+    <div class="section-header">
+      <span class="section-num">13</span>
+      <span class="section-title">Contact Us</span>
+    </div>
+    <p>Questions about these terms, a purchase, or a refund? Get in touch and we will reply within a few working days.</p>
+    <div class="contact-card">
+      <div class="contact-row">
+        <span class="contact-label">Developer</span>
+        <span class="contact-value">Sahil Partyal</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">App</span>
+        <span class="contact-value">Bigtext Board</span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Email</span>
+        <span class="contact-value"><a href="mailto:sahil.partyal@unitaspro.com">sahil.partyal@unitaspro.com</a></span>
+      </div>
+      <div class="contact-row">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value"><a href="tel:+918264954344">+91 82649 54344</a></span>
+      </div>
+    </div>
+  </section>
+
+  <div class="meta-bar">
+    <span style="display:flex;align-items:center;gap:6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><strong>Last Updated:</strong> August 18, 2026</span>
+    <span>Applies to Bigtext Board on iOS &amp; Android</span>
+  </div>
+
+</main>
+
+</div><!-- /.page-body -->
+
+<footer>
+  &copy; 2026 Sahil Partyal &mdash; Bigtext Board. All rights reserved.<br>
+  <a href="../">Privacy Policy</a>
+</footer>
+
+<script>
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.sidebar-link');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        links.forEach(l => l.classList.remove('active'));
+        const active = document.querySelector(`.sidebar-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+</body>
+</html>
